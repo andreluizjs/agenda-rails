@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Contatos</h1>
 
 <table class="table">
-  <thead>
+  <thead class="table-dark">
     <tr>
       <th scope="col">Nome</th>
       <th scope="col">Sobrenome</th>
@@ -19,9 +17,11 @@
         <td><%= contato.last_name %></td>
         <td><%= contato.email %></td>
         <td><%= contato.phone %></td>
-        <td><%= link_to 'Show', contato, class:"btn btn-secondary fa-thin fa-eye" %></td>
-        <td><%= link_to 'Edit', edit_contato_path(contato), class:"btn btn-secondary fa-thin fa-edit"  %></td>
-        <td><%= link_to 'Destroy', contato, class:"btn btn-danger fa-thin fa-trash" , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', contato, class:"btn btn-secondary fa-thin fa-eye" %>
+          <%= link_to 'Edit', edit_contato_path(contato), class:"btn btn-secondary fa-thin fa-edit"  %>
+          <%= link_to 'Destroy', contato, class:"btn btn-danger fa-thin fa-trash" , method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
        </tr>
     <% end %>
   </tbody>

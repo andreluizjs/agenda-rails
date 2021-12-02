@@ -20,9 +20,14 @@
 
   <body>
     <%= render 'home/header' %>
-
+      
       <div class="container">
         <!-- Content here -->
+        <br/>
+        <% if notice %>
+          <%= render 'layouts/alerts' %>
+        <% end %>
+
         <%= yield %>
       </div>
     
