@@ -1,24 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @contato.first_name %>
-</p>
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4"> <%= @contato.first_name %>  <%= @contato.last_name %></h1>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @contato.last_name %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @contato.email %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contato.email %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @contato.phone %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contato.phone %>
-</p>
+  <%= link_to 'Edit', edit_contato_path(@contato), class:"btn btn-secondary"  %> |
+  <%= link_to 'Back', contatos_path, class:"btn btn-dark"  %>
 
-<%= link_to 'Edit', edit_contato_path(@contato) %> |
-<%= link_to 'Back', contatos_path %>
+</div>

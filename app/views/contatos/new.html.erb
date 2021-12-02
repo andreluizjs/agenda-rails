@@ -1,5 +1,9 @@
 <h1>New Contato</h1>
+    <br/>
+  <div class="actions ">
+    <%= render 'form', contato: @contato, class:'btn btn-secondary' %>
+    <br/>
+    <%= link_to 'Back', contatos_path, class:'btn btn-secondary' %>
 
-<%= render 'form', contato: @contato %>
+  </div>
 
-<%= link_to 'Back', contatos_path %>
